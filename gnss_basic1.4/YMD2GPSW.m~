@@ -1,0 +1,10 @@
+function [GPSWK, GPSD] = YMD2GPSW(YYYY, M, D, span);
+MJD0 = YMD2MJD(1980, 1, 6, 0);
+day_range = [-span:0 1:span];
+MJD_mid = YMD2MJD(YYYY, M, D, 0);
+MJD = MJD_mid + day_range';
+
+GPSWK = floor( (MJD - MJD0)/7);
+GPSD = mod( MJD - MJD0, 7);
+
+return

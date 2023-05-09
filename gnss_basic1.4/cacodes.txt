@@ -1,0 +1,75 @@
+>> acfgen('CA',5)
+??? Undefined function or variable 'acfgen'.
+
+>> dir *.m
+
+ECEF_2_ENU.m       dummy_obsgen.m     nmsolngen.m        rotmat.m           
+GPS_signal.m       ecef_orb_rot.m     oct2bin.m          solgentest.m       
+WGS84_2_latlong.m  elaz.m             persv.m            solngen.m          
+YMD2GPSW.m         ephem.m            phasor_sim.m       sp3_read.m         
+YMD2MJD.m          ephpersv.m         pngen.m            td_corr.m          
+afmap.m            ephpick.m          point_soln.m       tropo.m            
+alman.m            ephsort.m          pr_obs.m           up.m               
+bin2oct.m          filter_waveform.m  pr_omc.m           yuma_reada.m       
+bpsk.m             geodetic.m         prn_gen_binary.m   yuma_reade.m       
+carrier.m          gmatrix.m          refrinex.m         
+code_search.m      helmert.m          rinex_inpt.m       
+dll_err.m          kepler_eqn.m       rinexe.m           
+dual_freq.m        klobuchar.m        rinexn.m           
+
+>> pncodes = pngen(0);
+>> size(pncodes)
+
+ans =
+
+        1023          32
+
+>> pncodes(1:32,5)'
+
+ans =
+
+  Columns 1 through 13 
+
+     1    -1    -1     1    -1     1     1    -1     1     1    -1    -1    -1
+
+  Columns 14 through 26 
+
+     1    -1    -1    -1     1     1    -1     1     1    -1    -1    -1     1
+
+  Columns 27 through 32 
+
+    -1     1    -1     1     1     1
+
+>> pncodes(1:32,15)'
+
+ans =
+
+  Columns 1 through 13 
+
+     1     1     1     1     1     1     1     1    -1     1     1     1     1
+
+  Columns 14 through 26 
+
+     1    -1    -1     1    -1     1    -1     1     1    -1     1     1    -1
+
+  Columns 27 through 32 
+
+    -1    -1     1     1    -1    -1
+
+>> pncodes(1:32,12)'
+
+ans =
+
+  Columns 1 through 13 
+
+     1     1     1     1     1    -1     1    -1    -1    -1    -1     1     1
+
+  Columns 14 through 26 
+
+    -1     1    -1     1     1     1    -1    -1    -1     1    -1    -1     1
+
+  Columns 27 through 32 
+
+    -1    -1    -1    -1     1    -1
+
+>> diary off

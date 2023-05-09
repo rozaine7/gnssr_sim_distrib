@@ -1,0 +1,11 @@
+function doy = MD2DOY( M, D);
+%
+% DOY = MD2DOY( M, D)
+% 
+% Computes the day of year (DOY) from the month (M) and day (D).  
+% M and D can be matrices (same dimensions)
+%
+
+  doy = datenum(2001*ones(size(M)), M, D) - datenum(2001, 1,1)+1;
+
+return
